@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:madeinnepal/Screens/Brands_screen.dart';
+import 'package:madeinnepal/Screens/row_Iteam.dart';
 import 'package:madeinnepal/constant.dart';
 
 class Homepage extends StatefulWidget {
@@ -15,50 +15,78 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: kcolor,
         centerTitle: true,
         title: const Text(
           "Made in Nepal",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
         ),
         actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.notification_add,
-                color: Colors.black,
-              ))
-        ],
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 40,
+              width: 40,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    spreadRadius: 0.0,
+                    blurRadius: 2,
+                  )
+                ],
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+              ),
+              child: IconButton(
+                  onPressed: () {}, icon: const Icon(Icons.notification_add)),
+            ),
+          )
+        ], /*
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: 40,
+            width: 40,
+            /*
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  spreadRadius: 0.0,
+                  blurRadius: 2,
+                )
+              ],
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+            ),*/
+            child: const Drawer(),
+          ),
+        ),
+        */
       ),
-      backgroundColor: Colors.white,
-      drawer: const Drawer(
-        backgroundColor: Colors.white,
-        shadowColor: Colors.white,
-      ),
+      backgroundColor: kcolor,
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: SafeArea(
-            child: Column(
-              children: [
-                Container(
+        child: SafeArea(
+          top: true,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Container(
                   height: 55,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
                         spreadRadius: 0.0,
-                        blurRadius: 1,
+                        blurRadius: 2,
                       )
                     ],
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Row(
                     children: [
-                      Container(
-                        width: 350,
+                      SizedBox(
+                        width: 375,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: TextFormField(
@@ -72,8 +100,11 @@ class _HomepageState extends State<Homepage> {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 100,
+              ),
+              SizedBox(
+                height: 100,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -85,7 +116,9 @@ class _HomepageState extends State<Homepage> {
                             letterSpacing: 0.5),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          const Allbrands();
+                        },
                         child: const Text(
                           "View All",
                           style: TextStyle(
@@ -97,23 +130,15 @@ class _HomepageState extends State<Homepage> {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 120,
-                        width: 100,
-                        color: Colors.black,
-                        child: const SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
+              ),
+              const SizedBox(
+                height: 200,
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: RowItems(),
+                ),
+              ),
+            ],
           ),
         ),
       ),
