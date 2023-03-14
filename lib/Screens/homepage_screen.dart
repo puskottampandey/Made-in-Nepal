@@ -111,7 +111,10 @@ class _HomepageState extends State<Homepage> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          const Allbrands();
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: ((context) => const Allbrands())));
                         },
                         child: const Text(
                           "View All",
@@ -133,6 +136,12 @@ class _HomepageState extends State<Homepage> {
                   child: RowItems(),
                 ),
               ),
+              const SizedBox(),
+              Column(
+                children: [
+                  Container(),
+                ],
+              )
             ],
           ),
         ),

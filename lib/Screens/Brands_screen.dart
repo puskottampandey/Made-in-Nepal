@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class Allbrands extends StatefulWidget {
   const Allbrands({super.key});
@@ -12,6 +10,10 @@ class Allbrands extends StatefulWidget {
 class _AllbrandsState extends State<Allbrands> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("All Brands"),
+      ),
+    );
   }
 }
