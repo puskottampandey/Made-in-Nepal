@@ -15,27 +15,22 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kcolor,
         centerTitle: true,
-        title: const Text(
-          "Made in Nepal",
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
-        ),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
               height: 40,
               width: 40,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
+              decoration: BoxDecoration(
+                color: kcolor,
+                boxShadow: const [
                   BoxShadow(
                     spreadRadius: 0.0,
                     blurRadius: 2,
                   )
                 ],
-                borderRadius: BorderRadius.all(Radius.circular(8)),
+                borderRadius: const BorderRadius.all(Radius.circular(8)),
               ),
               child: IconButton(
                   onPressed: () {}, icon: const Icon(Icons.notification_add)),
@@ -63,7 +58,6 @@ class _HomepageState extends State<Homepage> {
         ),
         */
       ),
-      backgroundColor: kcolor,
       body: SingleChildScrollView(
         child: SafeArea(
           top: true,
@@ -73,15 +67,15 @@ class _HomepageState extends State<Homepage> {
                 padding: const EdgeInsets.all(16.0),
                 child: Container(
                   height: 55,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    boxShadow: [
+                  decoration: BoxDecoration(
+                    color: kcolor,
+                    boxShadow: const [
                       BoxShadow(
                         spreadRadius: 0.0,
                         blurRadius: 2,
                       )
                     ],
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderRadius: const BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Row(
                     children: [
@@ -93,7 +87,7 @@ class _HomepageState extends State<Homepage> {
                             decoration: const InputDecoration(
                                 suffixIcon: Icon(Icons.search),
                                 border: InputBorder.none,
-                                hintText: "Search"),
+                                hintText: "Search Product......"),
                           ),
                         ),
                       )
@@ -122,9 +116,10 @@ class _HomepageState extends State<Homepage> {
                         child: const Text(
                           "View All",
                           style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600),
+                            decoration: TextDecoration.underline,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                       )
                     ],
@@ -132,9 +127,9 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               const SizedBox(
-                height: 200,
+                height: 175,
                 child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0.0),
                   child: RowItems(),
                 ),
               ),
