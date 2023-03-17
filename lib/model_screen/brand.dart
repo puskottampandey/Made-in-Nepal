@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
 
+class Product {
+  final String? imageurl;
+  final String? name;
+  final int? price;
+
+  Product({this.imageurl, this.name, this.price});
+}
+
 class Brand {
   final String? name;
   final String? imageurl;
+  List<Product>? products;
 
-  Brand({this.name, this.imageurl});
+  Brand({
+    this.name,
+    this.imageurl,
+    this.products,
+  });
 }
 
 const goldstariamge =
@@ -14,6 +27,18 @@ const caliberimage =
     "https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2021/02/29182743/caliber-200px.png";
 
 List<Brand> brand = [
-  Brand(name: "goldstar", imageurl: goldstariamge),
-  Brand(name: "caliber", imageurl: caliberimage)
+  Brand(
+    name: "goldstar",
+    imageurl: goldstariamge,
+    products: [
+      Product(imageurl: goldstariamge, name: "G10", price: 1900),
+    ],
+  ),
+  Brand(name: "caliber", imageurl: caliberimage, products: [
+    Product(
+      imageurl: caliberimage,
+      name: "mens caliber",
+      price: 4000,
+    )
+  ])
 ];

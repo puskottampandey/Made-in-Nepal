@@ -15,24 +15,18 @@ class RowItems extends StatefulWidget {
 
 class _RowItemsState extends State<RowItems> {
   @override
-  void initState() {
-    super.initState();
-    loadString();
-  }
-
-  loadString() async {
-    var data = await rootBundle.loadString("assets/data.json");
-    var decodedata = jsonDecode(data);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
       itemCount: brand.length,
       itemBuilder: (BuildContext context, int index) {
         return GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Brands(Brand: brand[index])));
+          },
           child: Container(
             width: 150,
             margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
@@ -47,10 +41,11 @@ class _RowItemsState extends State<RowItems> {
               borderRadius: BorderRadius.all(Radius.circular(8)),
             ),
             child: Column(
-              children: const [
-                SizedBox(
+              children: [
+                const SizedBox(
                   height: 10,
                 ),
+                Image.network(brand[index].imageurl.toString())
               ],
             ),
           ),
