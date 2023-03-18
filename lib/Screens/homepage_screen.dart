@@ -15,6 +15,13 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text(
+          "HamroSaman",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: kcolor,
         centerTitle: true,
         actions: [
           Padding(
@@ -22,15 +29,15 @@ class _HomepageState extends State<Homepage> {
             child: Container(
               height: 40,
               width: 40,
-              decoration: BoxDecoration(
-                color: kcolor,
-                boxShadow: const [
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
                   BoxShadow(
                     spreadRadius: 0.0,
                     blurRadius: 2,
                   )
                 ],
-                borderRadius: const BorderRadius.all(Radius.circular(8)),
+                borderRadius: BorderRadius.all(Radius.circular(8)),
               ),
               child: IconButton(
                   onPressed: () {}, icon: const Icon(Icons.notification_add)),
@@ -67,15 +74,15 @@ class _HomepageState extends State<Homepage> {
                 padding: const EdgeInsets.all(16.0),
                 child: Container(
                   height: 55,
-                  decoration: BoxDecoration(
-                    color: kcolor,
-                    boxShadow: const [
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [
                       BoxShadow(
                         spreadRadius: 0.0,
                         blurRadius: 2,
                       )
                     ],
-                    borderRadius: const BorderRadius.all(Radius.circular(8)),
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Row(
                     children: [
