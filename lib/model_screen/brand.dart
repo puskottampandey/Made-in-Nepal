@@ -32,9 +32,15 @@ List<Brand> brand = [
     imageurl: goldstariamge,
     products: [
       Product(imageurl: goldstariamge, name: "G10", price: 1900),
+      Product(imageurl: goldstariamge, name: "G10", price: 1900),
     ],
   ),
   Brand(name: "caliber", imageurl: caliberimage, products: [
+    Product(
+      imageurl: caliberimage,
+      name: "mens caliber",
+      price: 4000,
+    ),
     Product(
       imageurl: caliberimage,
       name: "mens caliber",

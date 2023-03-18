@@ -25,7 +25,7 @@ class _RowItemsState extends State<RowItems> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => Brands(Brand: brand[index])));
+                    builder: (context) => Brands(brand: brand[index])));
           },
           child: Container(
             width: 150,
@@ -43,9 +43,12 @@ class _RowItemsState extends State<RowItems> {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
-                Image.network(brand[index].imageurl.toString())
+                Image.network(
+                  brand[index].imageurl.toString(),
+                  fit: BoxFit.fitHeight,
+                )
               ],
             ),
           ),
