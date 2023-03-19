@@ -43,12 +43,13 @@ class _RowItemsState extends State<RowItems> {
               ),
               child: Column(
                 children: [
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Image.network(
-                    brand[index].imageurl.toString(),
-                    fit: BoxFit.fitHeight,
+                  const SizedBox(),
+                  ClipRRect(
+                    borderRadius: BorderRadiusDirectional.circular(8),
+                    child: Image.network(
+                      brand[index].imageurl.toString(),
+                      fit: BoxFit.cover,
+                    ),
                   )
                 ],
               )),

@@ -26,32 +26,65 @@ class Brands extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: 150,
-                    margin: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 10),
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          spreadRadius: 0.0,
-                          blurRadius: 2,
-                        )
-                      ],
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                    ),
-                    child: Column(
-                      children: [
-                        const SizedBox(
-                          height: 5,
+                  child: Stack(
+                    children: [
+                      Container(
+                        width: 175,
+                        margin: const EdgeInsets.symmetric(
+                            vertical: 0.0, horizontal: 8),
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              spreadRadius: 0.0,
+                              blurRadius: 2,
+                            )
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
-                        Image.network(
-                          brand.products![index].imageurl.toString(),
-                          fit: BoxFit.cover,
+                        child: Column(
+                          children: const [
+                            /*
+                            const SizedBox(),
+                            ClipRRect(
+                              borderRadius: BorderRadiusDirectional.circular(8),
+                              child: Image.network(
+                                brand.products![index].imageurl.toString(),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            
+                            Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Text(
+                                brand.products![index].price.toString(),
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            */
+                          ],
                         ),
-                        Text(brand.products![index].price.toString()),
-                      ],
-                    ),
+                      ),
+                      Positioned(
+                        right: 9,
+                        top: 2,
+                        child: Container(
+                          height: 150,
+                          width: 175,
+                          decoration: const BoxDecoration(
+                            color: Colors.black,
+                            boxShadow: [
+                              BoxShadow(
+                                spreadRadius: 0.0,
+                                blurRadius: 2,
+                              )
+                            ],
+                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 );
               },
