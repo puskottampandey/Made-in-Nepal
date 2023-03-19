@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:madeinnepal/Screens/Allbrands_screen.dart';
 import 'package:madeinnepal/Screens/row_Iteam.dart';
+import 'package:madeinnepal/Screens/trendingitem_screen.dart';
 import 'package:madeinnepal/constant.dart';
 
 class Homepage extends StatefulWidget {
@@ -66,6 +67,7 @@ class _HomepageState extends State<Homepage> {
         */
       ),
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: SafeArea(
           top: true,
           child: Column(
@@ -144,11 +146,22 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               const SizedBox(),
-              Column(
-                children: [
-                  Container(),
-                ],
-              )
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: const [
+                    Text(
+                      "Trending Products ",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 300,
+                child: Trending(),
+              ),
             ],
           ),
         ),

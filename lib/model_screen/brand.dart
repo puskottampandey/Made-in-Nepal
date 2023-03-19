@@ -31,18 +31,28 @@ List<Brand> brand = [
     name: "goldstar",
     imageurl: goldstariamge,
     products: [
-      Product(imageurl: goldstariamge, name: "G10", price: 1900),
-      Product(imageurl: goldstariamge, name: "G10", price: 1900),
+      Product(
+          imageurl:
+              "https://imgs.search.brave.com/8CuGe8x7-QmNfcwxrjzQH__wNXPY-6sXOE4P-ByAsBM/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/U2VwV0lidTBMZWp4/cmZVcVcydFl3SGFI/YSZwaWQ9QXBp",
+          name: "G10",
+          price: 1900),
+      Product(
+          imageurl:
+              'https://imgs.search.brave.com/qHA0sffbYt7ohgb8hSNA0qLO1uJRftUeD2ZNQ4Cz2D0/rs:fit:832:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC41/THR4aGJPM1p1Q3ds/RDNUOHlhN193SGFF/TyZwaWQ9QXBp',
+          name: "G10",
+          price: 1900),
     ],
   ),
   Brand(name: "caliber", imageurl: caliberimage, products: [
     Product(
-      imageurl: caliberimage,
+      imageurl:
+          'https://imgs.search.brave.com/7xW3PH_p-h3_Wiazo-OKojc74GSO091QbpM4BizblXA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5r/U0NjTEdXMXB0d29Z/RURXVEdYbktBSGFI/YSZwaWQ9QXBp',
       name: "mens caliber",
       price: 4000,
     ),
     Product(
-      imageurl: caliberimage,
+      imageurl:
+          "https://imgs.search.brave.com/DNcfzohHt3i0A46FSxfWPLxq1Yiv1hdnR-rchQw7zPc/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4w/NzNyU0o5VzJkNndU/QUJEeUdoSmJBSGFI/YSZwaWQ9QXBp",
       name: "mens caliber",
       price: 4000,
     )
