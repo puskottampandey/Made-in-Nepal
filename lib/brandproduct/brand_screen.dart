@@ -13,7 +13,10 @@ class Brands extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(brand.name.toString()),
+        title: Text(
+          brand.name.toString(),
+          style: const TextStyle(color: Colors.white),
+        ),
         backgroundColor: kcolor,
       ),
       body: Column(
@@ -43,44 +46,55 @@ class Brands extends StatelessWidget {
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         child: Column(
-                          children: const [
-                            /*
-                            const SizedBox(),
-                            ClipRRect(
-                              borderRadius: BorderRadiusDirectional.circular(8),
-                              child: Image.network(
-                                brand.products![index].imageurl.toString(),
-                                fit: BoxFit.cover,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              brand.products![index].name.toString(),
+                              style: const TextStyle(
+                                fontSize: 15,
                               ),
                             ),
-                            
-                            Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Text(
-                                brand.products![index].price.toString(),
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold),
-                              ),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(3.0),
+                                  child: Text(
+                                    brand.products![index].price.toString(),
+                                    style: const TextStyle(
+                                        color: Colors.blueGrey,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
+                                  ),
+                                ),
+                                Text(
+                                  brand.products![index].lastprice.toString(),
+                                  style: const TextStyle(
+                                      fontSize: 10,
+                                      decoration: TextDecoration.lineThrough,
+                                      decorationThickness: 1),
+                                )
+                              ],
                             ),
-                            */
                           ],
                         ),
                       ),
                       Positioned(
-                        right: 9,
-                        top: 2,
+                        right: 8,
+                        top: 0.1,
                         child: Container(
-                          height: 150,
+                          height: 175,
                           width: 175,
                           decoration: const BoxDecoration(
-                            color: Colors.black,
-                            boxShadow: [
-                              BoxShadow(
-                                spreadRadius: 0.0,
-                                blurRadius: 2,
-                              )
-                            ],
+                            color: Colors.white,
                             borderRadius: BorderRadius.all(Radius.circular(8)),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadiusDirectional.circular(8),
+                            child: Image.network(
+                              brand.products![index].imageurl.toString(),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       )

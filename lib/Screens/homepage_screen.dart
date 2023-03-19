@@ -16,11 +16,10 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
         title: const Text(
           "HamroSaman",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         backgroundColor: kcolor,
         centerTitle: true,
@@ -41,30 +40,13 @@ class _HomepageState extends State<Homepage> {
                 borderRadius: BorderRadius.all(Radius.circular(8)),
               ),
               child: IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.notification_add)),
+                onPressed: () {},
+                icon: const Icon(Icons.notification_add),
+                color: kcolor,
+              ),
             ),
           )
-        ], /*
-        leading: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 40,
-            width: 40,
-            /*
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  spreadRadius: 0.0,
-                  blurRadius: 2,
-                )
-              ],
-              borderRadius: BorderRadius.all(Radius.circular(8)),
-            ),*/
-            child: const Drawer(),
-          ),
-        ),
-        */
+        ],
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -94,9 +76,12 @@ class _HomepageState extends State<Homepage> {
                           padding: const EdgeInsets.all(8.0),
                           child: TextFormField(
                             decoration: const InputDecoration(
+                                iconColor: kcolor,
                                 suffixIcon: Icon(Icons.search),
+                                suffixIconColor: kcolor,
                                 border: InputBorder.none,
-                                hintText: "Search Product......"),
+                                hintText: "Search Product......",
+                                hintStyle: TextStyle(color: kcolor)),
                           ),
                         ),
                       )
@@ -128,10 +113,10 @@ class _HomepageState extends State<Homepage> {
                         child: const Text(
                           "View All",
                           style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                          ),
+                              decoration: TextDecoration.underline,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              color: kcolor),
                         ),
                       )
                     ],

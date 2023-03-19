@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
 
-final kcolor = Colors.lightBlue.shade50;
+const kcolor = Colors.blueGrey;
