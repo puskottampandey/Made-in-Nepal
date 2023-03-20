@@ -21,7 +21,7 @@ class _RowItemsState extends State<RowItems> {
       scrollDirection: Axis.horizontal,
       itemCount: brand.length,
       itemBuilder: (BuildContext context, int index) {
-        return GestureDetector(
+        return InkWell(
           onTap: () {
             Navigator.push(
                 context,
