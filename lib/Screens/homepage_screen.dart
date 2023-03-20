@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:madeinnepal/Screens/Allbrands_screen.dart';
+import 'package:madeinnepal/Screens/row_Iteam.dart';
+import 'package:madeinnepal/Screens/trendingitem_screen.dart';
 import 'package:madeinnepal/constant.dart';
 
 class Homepage extends StatefulWidget {
@@ -15,65 +16,83 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        centerTitle: true,
+        iconTheme: IconThemeData(color: Colors.white),
         title: const Text(
-          "Made in Nepal",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
+          "HamroSaman",
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
+        backgroundColor: kcolor,
+        centerTitle: true,
         actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.notification_add,
-                color: Colors.black,
-              ))
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 40,
+              width: 40,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    spreadRadius: 0.0,
+                    blurRadius: 2,
+                  )
+                ],
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+              ),
+              child: IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.notification_add),
+                color: kcolor,
+              ),
+            ),
+          )
         ],
       ),
-      backgroundColor: Colors.white,
-      drawer: const Drawer(
-        backgroundColor: Colors.white,
-        shadowColor: Colors.white,
-      ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: SafeArea(
-            child: Column(
-              children: [
-                Container(
+        scrollDirection: Axis.vertical,
+        child: SafeArea(
+          top: true,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Container(
                   height: 55,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
                         spreadRadius: 0.0,
-                        blurRadius: 1,
+                        blurRadius: 2,
                       )
                     ],
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Row(
                     children: [
-                      Container(
-                        width: 350,
+                      SizedBox(
+                        width: 375,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: TextFormField(
                             decoration: const InputDecoration(
+                                iconColor: kcolor,
                                 suffixIcon: Icon(Icons.search),
+                                suffixIconColor: kcolor,
                                 border: InputBorder.none,
-                                hintText: "Search"),
+                                hintText: "Search Product......",
+                                hintStyle: TextStyle(color: kcolor)),
                           ),
                         ),
                       )
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 100,
+              ),
+              SizedBox(
+                height: 100,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -85,35 +104,50 @@ class _HomepageState extends State<Homepage> {
                             letterSpacing: 0.5),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: ((context) => const Allbrands())));
+                        },
                         child: const Text(
                           "View All",
                           style: TextStyle(
                               decoration: TextDecoration.underline,
                               fontSize: 15,
-                              fontWeight: FontWeight.w600),
+                              fontWeight: FontWeight.w600,
+                              color: kcolor),
                         ),
                       )
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 120,
-                        width: 100,
-                        color: Colors.black,
-                        child: const SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
+              ),
+              const SizedBox(
+                height: 175,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0.0),
+                  child: RowItems(),
+                ),
+              ),
+              const SizedBox(),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: const [
+                    Text(
+                      "Trending Products ",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 300,
+                child: Trending(),
+              ),
+            ],
           ),
         ),
       ),

@@ -1,0 +1,23 @@
+{
+    "items": [{
+            "brand": 1,
+            "name": "GoldStar",
+            "imageurl": "https://imgs.search.brave.com/jvaq1nG7GP6D9u20_UeSFMGibULOh3LaMJ8YKOwRRUI/rs:fit:800:259:1/g:ce/aHR0cDovL2Fzc2V0/cy1jZG4uZWthbnRp/cHVyLmNvbS9pbWFn/ZXMvdGhpcmQtcGFy/dHkvbW9uZXktZmlu/YW5jZS9Hb2xkU3Rh/cl9sb2dvLTA4MTIy/MDE3MDg0NjUwLTEw/MDB4MC5qcGc"
+
+        },
+        {
+            "brand": 2,
+            "name": "CG",
+            "imageurl": "https://imgs.search.brave.com/J9LaSuFkROUVl-JQorsps9qAe8VOBB9DAcVUhvgb0pQ/rs:fit:940:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5o/TTZhMjItdlY1NTBp/X1NGeTF1dWxnSGFE/diZwaWQ9QXBp"
+
+        },
+        {
+
+            "brand": 2,
+            "name": "Caliber Shoes",
+            "imageurl": "https://imgs.search.brave.com/EGZbhswBpOnQiS1MfAnVO5aRM9FJCnuCYM3mKtqidts/rs:fit:545:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5N/aXlGd3hDSXdIUnpG/YTJkNTZvZzVRSGFH/YyZwaWQ9QXBp"
+
+
+        }
+    ]
+}
