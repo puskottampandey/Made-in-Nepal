@@ -110,10 +110,11 @@ class Brands extends StatelessWidget {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(8)),
                             ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadiusDirectional.circular(8),
-                              child: Hero(
-                                tag: Key,
+                            child: Hero(
+                              tag: brand.products![index].imageurl.toString(),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadiusDirectional.circular(8),
                                 child: Image.network(
                                   brand.products![index].imageurl.toString(),
                                   fit: BoxFit.cover,
