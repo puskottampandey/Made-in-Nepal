@@ -72,7 +72,7 @@ class Brands extends StatelessWidget {
                                     child: Text(
                                       brand.products![index].price.toString(),
                                       style: const TextStyle(
-                                          color: Colors.blueGrey,
+                                          color: pricecolor,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 18),
                                     ),

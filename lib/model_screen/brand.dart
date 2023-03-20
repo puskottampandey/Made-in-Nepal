@@ -34,14 +34,14 @@ List<Brand> brand = [
           imageurl:
               "https://imgs.search.brave.com/8CuGe8x7-QmNfcwxrjzQH__wNXPY-6sXOE4P-ByAsBM/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/U2VwV0lidTBMZWp4/cmZVcVcydFl3SGFI/YSZwaWQ9QXBp",
           name: "G10",
-          price: "Rs.1900",
-          lastprice: "Rs.1800"),
+          price: "Rs.1,900",
+          lastprice: "Rs.1,800"),
       Product(
           imageurl:
               'https://imgs.search.brave.com/7gRnp_ml4qgEcwD3zhdmpn6mW24ni5-hMeZiz3q9Xis/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/MUZ5bUNTUmhiWk1W/N3ZQWTNNZS1BSGFI/YSZwaWQ9QXBp',
           name: "G10",
-          price: "Rs.1900",
-          lastprice: "Rs.1800"),
+          price: "Rs.1,900",
+          lastprice: "Rs.1,800"),
     ],
   ),
   Brand(name: "Caliber", imageurl: caliberimage, products: [
@@ -49,13 +49,13 @@ List<Brand> brand = [
         imageurl:
             'https://imgs.search.brave.com/7xW3PH_p-h3_Wiazo-OKojc74GSO091QbpM4BizblXA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5r/U0NjTEdXMXB0d29Z/RURXVEdYbktBSGFI/YSZwaWQ9QXBp',
         name: "Mens caliber",
-        price: "Rs.4000",
-        lastprice: "Rs.3500"),
+        price: "Rs.4,000",
+        lastprice: "Rs.3,500"),
     Product(
         imageurl:
             "https://imgs.search.brave.com/DNcfzohHt3i0A46FSxfWPLxq1Yiv1hdnR-rchQw7zPc/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4w/NzNyU0o5VzJkNndU/QUJEeUdoSmJBSGFI/YSZwaWQ9QXBp",
         name: "Mens caliber",
-        price: " Rs.4000",
-        lastprice: "Rs.3000")
+        price: " Rs.4,000",
+        lastprice: "Rs.3,000")
   ])
 ];
