@@ -11,30 +11,6 @@ class ProductDetails extends StatefulWidget {
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
-  int expression = 03;
-  int initialvalue = 0;
-
-  minus() {
-    setState(() {
-      if (initialvalue == 0 && initialvalue > 0) {
-        initialvalue;
-      }
-      initialvalue--;
-    });
-  }
-
-  add() {
-    setState(() {
-      initialvalue++;
-    });
-  }
-
-  total() {
-    setState(() {
-      initialvalue = initialvalue * 900;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,7 +117,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                 ],
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
@@ -171,82 +146,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                             fontSize: 13),
                       ),
                     ],
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        SizedBox(
-                          height: 100,
-                          width: 150,
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                      height: 40,
-                                      width: 30,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(blurRadius: 3),
-                                        ],
-                                      ),
-                                      child: GestureDetector(
-                                        child: const Center(
-                                          child: Text(
-                                            "-",
-                                            style: TextStyle(fontSize: 30),
-                                          ),
-                                        ),
-                                        onTap: () {
-                                          minus();
-                                        },
-                                      )),
-                                  Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        12, 8, 0.0, 0.0),
-                                    child: Center(
-                                      child: SizedBox(
-                                        height: 40,
-                                        width: 30,
-                                        child: Text(
-                                          "$initialvalue",
-                                          style: const TextStyle(fontSize: 20),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                      height: 40,
-                                      width: 30,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(blurRadius: 3),
-                                        ],
-                                      ),
-                                      child: IconButton(
-                                        onPressed: () {
-                                          add();
-                                        },
-                                        icon: const Icon(Icons.add),
-                                      ))
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Text("Total:$initialvalue"),
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
                   ),
                 ],
               ),

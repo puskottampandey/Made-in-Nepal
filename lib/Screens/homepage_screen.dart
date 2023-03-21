@@ -16,7 +16,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: const Text(
           "HamroSaman",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
