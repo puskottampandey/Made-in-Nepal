@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:madeinnepal/Screens/Allbrands_screen.dart';
+import 'package:madeinnepal/Screens/cart_screen.dart';
+import 'package:madeinnepal/Screens/profile_screen.dart';
 import 'package:madeinnepal/Screens/row_Iteam.dart';
 import 'package:madeinnepal/Screens/trendingitem_screen.dart';
 import 'package:madeinnepal/constant.dart';

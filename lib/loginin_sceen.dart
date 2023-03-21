@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:madeinnepal/Screens/homepage_screen.dart';
+import 'package:madeinnepal/Screens/home_screen.dart';
 
 import 'package:madeinnepal/constant.dart';
 
