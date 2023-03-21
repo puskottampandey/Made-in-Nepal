@@ -11,7 +11,7 @@ class ProductDetails extends StatefulWidget {
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
-  int expression = 0;
+  int expression = 03;
   int initialvalue = 0;
 
   minus() {
@@ -239,7 +239,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                 ],
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(10.0),
                                 child: Text("Total:$initialvalue"),
                               )
                             ],

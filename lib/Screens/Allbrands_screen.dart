@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:madeinnepal/Screens/row_Iteam.dart';
 
 class Allbrands extends StatefulWidget {
   const Allbrands({super.key});
@@ -13,6 +14,17 @@ class _AllbrandsState extends State<Allbrands> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("All Brands"),
+      ),
+      body: Column(
+        children: const [
+          SizedBox(
+            height: 175,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0.0),
+              child: RowItems(),
+            ),
+          ),
+        ],
       ),
     );
   }
