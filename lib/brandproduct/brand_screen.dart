@@ -14,6 +14,7 @@ class Brands extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
         title: Text(
           brand.name.toString(),
           style: const TextStyle(color: Colors.white),
