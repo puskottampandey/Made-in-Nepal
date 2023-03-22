@@ -12,11 +12,12 @@ class _TrendingState extends State<Trending> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      scrollDirection: Axis.vertical,
-      itemCount: brand.length,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: 20,
       itemBuilder: (BuildContext context, int index) {
         return Container(
-          width: 100,
+          width: MediaQuery.of(context).size.width,
+          height: 100,
           margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           decoration: const BoxDecoration(
             color: Colors.white,
@@ -29,12 +30,7 @@ class _TrendingState extends State<Trending> {
             borderRadius: BorderRadius.all(Radius.circular(8)),
           ),
           child: Column(
-            children: [
-              Image.network(
-                brand[index].imageurl.toString(),
-                fit: BoxFit.cover,
-              ),
-            ],
+            children: const [Text("puskottam")],
           ),
         );
       },

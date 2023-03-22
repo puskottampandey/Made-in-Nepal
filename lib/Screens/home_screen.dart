@@ -146,7 +146,7 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               const SizedBox(
-                height: 300,
+                height: 400,
                 child: Trending(),
               ),
             ],
