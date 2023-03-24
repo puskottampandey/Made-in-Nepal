@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:madeinnepal/model_screen/brand.dart';
 
 class Trending extends StatelessWidget {
-  final Brand brand;
-  const Trending({super.key, required this.brand});
+  const Trending({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       physics: const NeverScrollableScrollPhysics(),
-      itemCount: brand.products?.length,
+      itemCount: brand.length,
       itemBuilder: (BuildContext context, int index) {
         return Padding(
           padding: const EdgeInsets.all(8.0),
@@ -42,10 +41,7 @@ class Trending extends StatelessWidget {
                     ],
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),
-                  child: Image.network(
-                    brand.products![index].imageurl.toString(),
-                  ),
-                ),
+                )
               ],
             ),
           ),
