@@ -5,6 +5,7 @@ import 'package:madeinnepal/Screens/profile_screen.dart';
 import 'package:madeinnepal/Screens/row_Iteam.dart';
 import 'package:madeinnepal/Screens/trendingitem_screen.dart';
 import 'package:madeinnepal/constant.dart';
+import 'package:madeinnepal/model_screen/brand.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -145,9 +146,11 @@ class _HomepageState extends State<Homepage> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 400,
-                child: Trending(),
+              SizedBox(
+                height: 500,
+                child: Trending(
+                  brand: Brand(),
+                ),
               ),
             ],
           ),
