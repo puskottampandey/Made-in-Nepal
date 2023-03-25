@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import 'package:madeinnepal/Screens/cart_screen.dart';
@@ -92,7 +94,44 @@ class _HomeState extends State<Home> {
         ],
       ),
       */
-      body: widgetscreen(selectedindex),
+      body: WillPopScope(
+        onWillPop: () async {
+          if (selectedindex != 0) {
+            setState(() {
+              selectedindex = 0;
+            });
+            return false;
+          } else if (selectedindex == 0) {
+            return await showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                      title: const Text("Are you sure you want to exit?"),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text(
+                            "Cancel",
+                            style: TextStyle(color: kcolor),
+                          ),
+                        ),
+                        TextButton(
+                            onPressed: () {
+                              exit(0);
+                            },
+                            child: const Text(
+                              "Yes",
+                              style: TextStyle(color: kcolor),
+                            ))
+                      ],
+                    ));
+          } else {
+            return true;
+          }
+        },
+        child: widgetscreen(selectedindex),
+      ),
     );
   }
 }
