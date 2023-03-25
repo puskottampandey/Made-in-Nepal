@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:madeinnepal/constant.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});
@@ -12,6 +11,11 @@ class Cart extends StatefulWidget {
 class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: kcolor,
+        title: const Text("Cart"),
+      ),
+    );
   }
 }

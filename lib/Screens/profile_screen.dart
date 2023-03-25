@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+
+import 'package:madeinnepal/constant.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -12,6 +12,11 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: kcolor,
+        title: const Text("Account"),
+      ),
+    );
   }
 }

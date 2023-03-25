@@ -146,8 +146,32 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               const SizedBox(
-                height: 500,
-              )
+                height: 620,
+                child: Trending(),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      "Categories",
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0.5),
+                    ),
+                    Text(
+                      "View All",
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: kcolor),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
