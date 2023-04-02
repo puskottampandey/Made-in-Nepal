@@ -4,7 +4,6 @@ import 'package:madeinnepal/Screens/Allbrands_screen.dart';
 import 'package:madeinnepal/Screens/row_Iteam.dart';
 import 'package:madeinnepal/Screens/trendingitem_screen.dart';
 import 'package:madeinnepal/constant.dart';
-import 'package:madeinnepal/model_screen/brand.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
