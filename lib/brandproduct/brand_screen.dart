@@ -24,7 +24,7 @@ class Brands extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 400,
+            height: 500,
             child: GridView.builder(
               scrollDirection: Axis.vertical,
               itemCount: brand.products?.length,

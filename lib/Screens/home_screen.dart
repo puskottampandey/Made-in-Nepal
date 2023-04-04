@@ -145,7 +145,7 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               const SizedBox(
-                height: 620,
+                height: 480,
                 child: Trending(),
               ),
               Padding(

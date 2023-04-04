@@ -20,7 +20,7 @@ class Brand {
 }
 
 const goldstariamge =
-    "https://imgs.search.brave.com/jvaq1nG7GP6D9u20_UeSFMGibULOh3LaMJ8YKOwRRUI/rs:fit:800:259:1/g:ce/aHR0cDovL2Fzc2V0/cy1jZG4uZWthbnRp/cHVyLmNvbS9pbWFn/ZXMvdGhpcmQtcGFy/dHkvbW9uZXktZmlu/YW5jZS9Hb2xkU3Rh/cl9sb2dvLTA4MTIy/MDE3MDg0NjUwLTEw/MDB4MC5qcGc";
+    "https://www.goldstarshoes.com/MediaThumb/original/Media/Goldstar/Logos/goldstar-logo-blue.png";
 
 const caliberimage =
     "https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2021/02/29182743/caliber-200px.png";
@@ -31,31 +31,65 @@ List<Brand> brand = [
     imageurl: goldstariamge,
     products: [
       Product(
-          imageurl:
-              "https://imgs.search.brave.com/8CuGe8x7-QmNfcwxrjzQH__wNXPY-6sXOE4P-ByAsBM/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/U2VwV0lidTBMZWp4/cmZVcVcydFl3SGFI/YSZwaWQ9QXBp",
-          name: "G10",
+          imageurl: "https://www.goldstarshoes.com/Media/1_8.png",
+          name: "P303 shoes for women",
           price: "Rs.1,900",
           lastprice: "Rs.1,800"),
       Product(
-          imageurl:
-              'https://imgs.search.brave.com/7gRnp_ml4qgEcwD3zhdmpn6mW24ni5-hMeZiz3q9Xis/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/MUZ5bUNTUmhiWk1W/N3ZQWTNNZS1BSGFI/YSZwaWQ9QXBp',
-          name: "G10",
-          price: "Rs.1,900",
-          lastprice: "Rs.1,800"),
+          imageurl: 'https://www.goldstarshoes.com/Media/highlander_(4).png',
+          name: "G10 G2006",
+          price: "Rs.3,285",
+          lastprice: "Rs.3650"),
+      Product(
+          imageurl: 'https://www.goldstarshoes.com/Media/2_22.png',
+          name: "G10 G100A",
+          price: "Rs.2,525",
+          lastprice: "Rs.3600"),
     ],
   ),
   Brand(name: "Caliber", imageurl: caliberimage, products: [
     Product(
         imageurl:
-            'https://imgs.search.brave.com/7xW3PH_p-h3_Wiazo-OKojc74GSO091QbpM4BizblXA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5r/U0NjTEdXMXB0d29Z/RURXVEdYbktBSGFI/YSZwaWQ9QXBp',
+            'https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2022/12/06132908/2-2-600x450.jpg',
         name: "Mens caliber",
         price: "Rs.4,000",
         lastprice: "Rs.3,500"),
     Product(
         imageurl:
-            "https://imgs.search.brave.com/DNcfzohHt3i0A46FSxfWPLxq1Yiv1hdnR-rchQw7zPc/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4w/NzNyU0o5VzJkNndU/QUJEeUdoSmJBSGFI/YSZwaWQ9QXBp",
+            "https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2022/01/29181651/832-Black-Side-2-600x450.png",
         name: "Mens caliber",
         price: " Rs.4,000",
-        lastprice: "Rs.3,000")
-  ])
+        lastprice: "Rs.3,000"),
+    Product(
+        imageurl:
+            'https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2022/12/02214942/824-Black-2-600x450.jpg',
+        name: "Mens caliber",
+        price: "Rs.4,000",
+        lastprice: "Rs.3,500"),
+  ]),
+  Brand(
+    name: "Mheecha",
+    imageurl:
+        "http://mheecha.com/mc/wp-content/uploads/2016/11/web_logo_mheecha-01.png",
+    products: [
+      Product(
+          imageurl:
+              "https://www.mheecha.com/mc/wp-content/uploads/2021/11/front_navyblue_orange-6-504x600.jpg",
+          name: "ALLEY BACKPACK",
+          price: "Rs.3,150",
+          lastprice: "Rs.3,500"),
+      Product(
+          imageurl:
+              'https://www.mheecha.com/mc/wp-content/uploads/2020/08/archer_chambraymaroon_front-504x600.jpg',
+          name: "ARCHER BACKPACK",
+          price: "Rs.3,750",
+          lastprice: "Rs.4,000"),
+      Product(
+          imageurl:
+              "https://www.mheecha.com/mc/wp-content/uploads/2021/10/Deepteal_Icegrey_Front-504x600.jpg",
+          name: "ALLEY BACKPACK",
+          price: "Rs.3,150",
+          lastprice: "Rs.3,500"),
+    ],
+  ),
 ];

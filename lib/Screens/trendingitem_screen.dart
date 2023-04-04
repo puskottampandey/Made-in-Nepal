@@ -9,11 +9,10 @@ class Trending extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: brand.length * 2,
+      itemCount: brand.length * 3,
       itemBuilder: (BuildContext context, int index) {
-        final brandindex = index ~/ 2;
-        final productindex = index % 2;
+        final brandindex = index ~/ 3;
+        final productindex = index % 3;
         final product = brand[brandindex].products![productindex];
         return Padding(
           padding: const EdgeInsets.all(8.0),

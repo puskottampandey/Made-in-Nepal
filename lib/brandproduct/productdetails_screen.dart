@@ -61,6 +61,7 @@ class _ProductDetailsState extends State<ProductDetails> {
           Stack(
             children: [
               Container(
+                width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
