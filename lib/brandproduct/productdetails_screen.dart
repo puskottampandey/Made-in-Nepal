@@ -11,6 +11,21 @@ class ProductDetails extends StatefulWidget {
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
+  int experssion = 0;
+  increaseitem() {
+    setState(() {
+      experssion++;
+    });
+  }
+
+  decreaseitem() {
+    setState(() {
+      if (experssion > 0) {
+        experssion--;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +63,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 ),
                 child: const Center(
                     child: Text(
-                  "Buy",
+                  "Add to Cart",
                   style: TextStyle(color: Colors.white),
                 )),
               )
@@ -107,49 +122,141 @@ class _ProductDetailsState extends State<ProductDetails> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 15),
-            child: Container(
-              height: MediaQuery.of(context).size.width * 0.85,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
-                boxShadow: const [
-                  BoxShadow(blurRadius: 3),
-                ],
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      widget.products.name.toString(),
-                      style: const TextStyle(fontSize: 18),
-                    ),
+            child: Stack(
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.width * 0.85,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: const [
+                      BoxShadow(blurRadius: 3),
+                    ],
                   ),
-                  Row(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 0, horizontal: 8),
+                        padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          widget.products.price.toString(),
-                          style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: pricecolor),
+                          widget.products.name.toString(),
+                          style: const TextStyle(fontSize: 18),
                         ),
                       ),
-                      Text(
-                        widget.products.lastprice.toString(),
-                        style: const TextStyle(
-                            decoration: TextDecoration.lineThrough,
-                            fontSize: 13),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          // ignore: avoid_unnecessary_containers
+                          Container(
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 0, horizontal: 8),
+                                  child: Text(
+                                    widget.products.price.toString(),
+                                    style: const TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: pricecolor),
+                                  ),
+                                ),
+                                Text(
+                                  widget.products.lastprice.toString(),
+                                  style: const TextStyle(
+                                      decoration: TextDecoration.lineThrough,
+                                      fontSize: 13),
+                                ),
+                              ],
+                            ),
+                          ),
+                          // ignore: avoid_unnecessary_containers
+                          Container(
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: SizedBox(
+                                    height: 30,
+                                    width: 100,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        InkWell(
+                                          onTap: () {
+                                            decreaseitem();
+                                          },
+                                          child: Container(
+                                            height: 30,
+                                            width: 30,
+                                            decoration: BoxDecoration(
+                                              color: Colors.pink.shade50,
+                                              borderRadius:
+                                                  BorderRadiusDirectional
+                                                      .circular(8),
+                                            ),
+                                            child: const Center(
+                                              child: Text(
+                                                "-",
+                                                style: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 30,
+                                          width: 30,
+                                          child: Center(
+                                            child: Text(
+                                              " $experssion",
+                                              style: const TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            increaseitem();
+                                          },
+                                          child: Container(
+                                            height: 30,
+                                            width: 30,
+                                            decoration: BoxDecoration(
+                                              color: Colors.black,
+                                              borderRadius:
+                                                  BorderRadiusDirectional
+                                                      .circular(8),
+                                            ),
+                                            child: const Center(
+                                              child: Text(
+                                                "+",
+                                                style: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.white),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
                       ),
                     ],
                   ),
-                ],
-              ),
+                )
+              ],
             ),
           )
         ],
