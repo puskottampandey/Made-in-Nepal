@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:madeinnepal/Screens/cart_screen.dart';
 import 'package:madeinnepal/Screens/home_screen.dart';
@@ -118,7 +119,7 @@ class _HomeState extends State<Home> {
                         ),
                         TextButton(
                             onPressed: () {
-                              exit(0);
+                              SystemNavigator.pop();
                             },
                             child: const Text(
                               "Yes",
