@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 import 'package:madeinnepal/constant.dart';
 import 'package:madeinnepal/model_screen/brand.dart';
@@ -11,6 +13,7 @@ class ProductDetails extends StatefulWidget {
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
+  bool ispressed = false;
   int experssion = 0;
   increaseitem() {
     setState(() {
@@ -114,7 +117,29 @@ class _ProductDetailsState extends State<ProductDetails> {
                         color: Colors.black,
                       ),
                     ),
-                    IconButton(onPressed: () {}, icon: const Icon(Icons.share))
+                    Container(
+                      child: Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.share),
+                          ),
+                          IconButton(
+                            icon: Icon(
+                              ispressed
+                                  ? Icons.favorite
+                                  : Icons.favorite_border_outlined,
+                              color: ispressed ? kcolor : Colors.black,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                ispressed = !ispressed;
+                              });
+                            },
+                          )
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               )
@@ -147,7 +172,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          // ignore: avoid_unnecessary_containers
                           Container(
                             child: Row(
                               children: [
@@ -171,7 +195,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                               ],
                             ),
                           ),
-                          // ignore: avoid_unnecessary_containers
                           Container(
                             child: Row(
                               children: [
