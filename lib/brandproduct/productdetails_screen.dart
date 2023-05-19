@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:madeinnepal/constant.dart';
 import 'package:madeinnepal/model_screen/brand.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class ProductDetails extends StatefulWidget {
   final Product products;
@@ -31,6 +32,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   @override
   Widget build(BuildContext context) {
+    final player = AudioPlayer();
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 13),
