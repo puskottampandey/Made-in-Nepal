@@ -277,6 +277,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                           )
                         ],
                       ),
+                      Text(widget.products.description.toString())
                     ],
                   ),
                 )

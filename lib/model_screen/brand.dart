@@ -3,8 +3,9 @@ class Product {
   final String? name;
   final String? price;
   final String? lastprice;
-
-  Product({this.imageurl, this.name, this.price, this.lastprice});
+  final String? description;
+  Product(
+      {this.imageurl, this.name, this.price, this.lastprice, this.description});
 }
 
 class Brand {
@@ -34,38 +35,49 @@ List<Brand> brand = [
           imageurl: "https://www.goldstarshoes.com/Media/1_8.png",
           name: "P303 shoes for women",
           price: "Rs.1,900",
-          lastprice: "Rs.1,800"),
+          lastprice: "Rs.1,800",
+          description:
+              "Our new model G10 P303 Goldstar Shoes is here to complete your hunt for the perfect shoe.\n These women's Goldstar Shoes are specially built for runners and gym freaks. The upper skin's premium elastic fiber provides greater comfort, durability, and a perfect fit for your feet. Place your order at Goldstar Shoes before it sells ou"),
       Product(
-          imageurl: 'https://www.goldstarshoes.com/Media/highlander_(4).png',
-          name: "G10 G2006",
-          price: "Rs.3,285",
-          lastprice: "Rs.3650"),
+        imageurl: 'https://www.goldstarshoes.com/Media/highlander_(4).png',
+        name: "G10 G2006",
+        price: "Rs.3,285",
+        lastprice: "Rs.3650",
+        description: "",
+      ),
       Product(
           imageurl: 'https://www.goldstarshoes.com/Media/2_22.png',
           name: "G10 G100A",
           price: "Rs.2,525",
-          lastprice: "Rs.3600"),
+          lastprice: "Rs.3600",
+          description: ""),
     ],
   ),
   Brand(name: "Caliber", imageurl: caliberimage, products: [
     Product(
-        imageurl:
-            'https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2022/12/06132908/2-2-600x450.jpg',
-        name: "Mens caliber",
-        price: "Rs.4,000",
-        lastprice: "Rs.3,500"),
+      imageurl:
+          'https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2022/12/06132908/2-2-600x450.jpg',
+      name: "Mens caliber",
+      price: "Rs.4,000",
+      lastprice: "Rs.3,500",
+      description: "",
+    ),
     Product(
-        imageurl:
-            "https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2022/01/29181651/832-Black-Side-2-600x450.png",
-        name: "Mens caliber",
-        price: " Rs.4,000",
-        lastprice: "Rs.3,000"),
+      imageurl:
+          "https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2022/01/29181651/832-Black-Side-2-600x450.png",
+      name: "Mens caliber",
+      price: " Rs.4,000",
+      lastprice: "Rs.3,000",
+      description: "",
+    ),
     Product(
-        imageurl:
-            'https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2022/12/02214942/824-Black-2-600x450.jpg',
-        name: "Mens caliber",
-        price: "Rs.4,000",
-        lastprice: "Rs.3,500"),
+      imageurl:
+          'https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2022/12/02214942/824-Black-2-600x450.jpg',
+      name: "Mens caliber",
+      price: "Rs.4,000",
+      lastprice: "Rs.3,500",
+      description: "",
+    ),
   ]),
   Brand(
     name: "Mheecha",
@@ -73,23 +85,29 @@ List<Brand> brand = [
         "http://mheecha.com/mc/wp-content/uploads/2016/11/web_logo_mheecha-01.png",
     products: [
       Product(
-          imageurl:
-              "https://www.mheecha.com/mc/wp-content/uploads/2021/11/front_navyblue_orange-6-504x600.jpg",
-          name: "ALLEY BACKPACK",
-          price: "Rs.3,150",
-          lastprice: "Rs.3,500"),
+        imageurl:
+            "https://www.mheecha.com/mc/wp-content/uploads/2021/11/front_navyblue_orange-6-504x600.jpg",
+        name: "ALLEY BACKPACK",
+        price: "Rs.3,150",
+        lastprice: "Rs.3,500",
+        description: "",
+      ),
       Product(
-          imageurl:
-              'https://www.mheecha.com/mc/wp-content/uploads/2020/08/archer_chambraymaroon_front-504x600.jpg',
-          name: "ARCHER BACKPACK",
-          price: "Rs.3,750",
-          lastprice: "Rs.4,000"),
+        imageurl:
+            'https://www.mheecha.com/mc/wp-content/uploads/2020/08/archer_chambraymaroon_front-504x600.jpg',
+        name: "ARCHER BACKPACK",
+        price: "Rs.3,750",
+        lastprice: "Rs.4,000",
+        description: "",
+      ),
       Product(
-          imageurl:
-              "https://www.mheecha.com/mc/wp-content/uploads/2021/10/Deepteal_Icegrey_Front-504x600.jpg",
-          name: "ALLEY BACKPACK",
-          price: "Rs.3,150",
-          lastprice: "Rs.3,500"),
+        imageurl:
+            "https://www.mheecha.com/mc/wp-content/uploads/2021/10/Deepteal_Icegrey_Front-504x600.jpg",
+        name: "ALLEY BACKPACK",
+        price: "Rs.3,150",
+        lastprice: "Rs.3,500",
+        description: "",
+      ),
     ],
   ),
 ];
