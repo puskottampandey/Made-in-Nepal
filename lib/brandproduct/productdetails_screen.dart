@@ -167,7 +167,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           widget.products.name.toString(),
-                          style: const TextStyle(fontSize: 18),
+                          style: const TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
                         ),
                       ),
                       Row(
@@ -191,7 +192,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                                   widget.products.lastprice.toString(),
                                   style: const TextStyle(
                                       decoration: TextDecoration.lineThrough,
-                                      fontSize: 13),
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
@@ -277,7 +279,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                           )
                         ],
                       ),
-                      Text(widget.products.description.toString())
+                      Text(
+                        widget.products.description.toString(),
+                        style: const TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w100),
+                      )
                     ],
                   ),
                 )

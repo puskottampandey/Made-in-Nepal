@@ -37,7 +37,7 @@ List<Brand> brand = [
           price: "Rs.1,900",
           lastprice: "Rs.1,800",
           description:
-              "Our new model G10 P303 Goldstar Shoes is here to complete your hunt for the perfect shoe.\n These women's Goldstar Shoes are specially built for runners and gym freaks. The upper skin's premium elastic fiber provides greater comfort, durability, and a perfect fit for your feet. Place your order at Goldstar Shoes before it sells ou"),
+              "  Our new model G10 P303 Goldstar Shoes is here to complete your hunt for the perfect shoe.\nThese women's Goldstar Shoes are specially built for runners and gym freaks. The upper skin's premium elastic fiber provides greater comfort, durability, and a perfect fit for your feet. Place your order at Goldstar Shoes before it sells ou"),
       Product(
         imageurl: 'https://www.goldstarshoes.com/Media/highlander_(4).png',
         name: "G10 G2006",
