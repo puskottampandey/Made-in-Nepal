@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:madeinnepal/Screens/Allbrands_screen.dart';
+import 'package:madeinnepal/Screens/categories_screen.dart';
 
 import 'package:madeinnepal/Screens/row_Iteam.dart';
 import 'package:madeinnepal/Screens/trendingitem_screen.dart';
@@ -134,7 +135,7 @@ class _HomepageState extends State<Homepage> {
               ),
               const SizedBox(),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(5.0),
                 child: Row(
                   children: const [
                     Text(
@@ -146,7 +147,7 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               const SizedBox(
-                height: 480,
+                height: 280,
                 child: Trending(),
               ),
               Padding(
@@ -171,6 +172,10 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 175,
+                child: const Categoreis(),
               ),
             ],
           ),

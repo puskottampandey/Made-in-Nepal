@@ -37,20 +37,22 @@ List<Brand> brand = [
           price: "Rs.1,900",
           lastprice: "Rs.1,800",
           description:
-              "  Our new model G10 P303 Goldstar Shoes is here to complete your hunt for the perfect shoe.\nThese women's Goldstar Shoes are specially built for runners and gym freaks. The upper skin's premium elastic fiber provides greater comfort, durability, and a perfect fit for your feet. Place your order at Goldstar Shoes before it sells ou"),
+              "Our new model G10 P303 Goldstar Shoes is here to complete your hunt for the perfect shoe.\nThese women's Goldstar Shoes are specially built for runners and gym freaks. The upper skin's premium elastic fiber provides greater comfort, durability, and a perfect fit for your feet. Place your order at Goldstar Shoes before it sells out!"),
       Product(
         imageurl: 'https://www.goldstarshoes.com/Media/highlander_(4).png',
         name: "G10 G2006",
         price: "Rs.3,285",
         lastprice: "Rs.3650",
-        description: "",
+        description:
+            "Make blissful memories with the new, technologically superior Goldstar Shoes G10 L2104 waterproof trekking shoes. Specially designed for long treks, they provide the highest level of protection for your feet and ankles. Place your order at Goldstar Shoes before it sells out!",
       ),
       Product(
           imageurl: 'https://www.goldstarshoes.com/Media/2_22.png',
           name: "G10 G100A",
           price: "Rs.2,525",
           lastprice: "Rs.3600",
-          description: ""),
+          description:
+              "Buy Goldstar G10 Series, G100A Goldstar men's shoes from the official Goldstar Shoes website, if you are looking for extra comfort, durability, and the best look at the best value"),
     ],
   ),
   Brand(name: "Caliber", imageurl: caliberimage, products: [

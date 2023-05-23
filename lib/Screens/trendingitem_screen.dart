@@ -15,7 +15,7 @@ class Trending extends StatelessWidget {
         final productindex = index % 3;
         final product = brand[brandindex].products![productindex];
         return Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(3.0),
           child: InkWell(
             onTap: () {
               Navigator.push(
