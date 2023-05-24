@@ -59,10 +59,11 @@ List<Brand> brand = [
     Product(
       imageurl:
           'https://calibershoes.sgp1.digitaloceanspaces.com/uploads/2022/12/06132908/2-2-600x450.jpg',
-      name: "Mens caliber",
+      name: "Caliber Shoes Black Sport For Men",
       price: "Rs.4,000",
       lastprice: "Rs.3,500",
-      description: "",
+      description:
+          "Take on the new paths and feel all the confidence with these mesh Caliber shoes made with passion for the individuals who stand their ground and take control of their own destiny. Along with the breathable mesh, the cushioned footed within will help you run your errands in comfor",
     ),
     Product(
       imageurl:
@@ -70,7 +71,8 @@ List<Brand> brand = [
       name: "Mens caliber",
       price: " Rs.4,000",
       lastprice: "Rs.3,000",
-      description: "",
+      description:
+          "Take on the new paths and feel all the confidence with these mesh Caliber shoes made with passion for the individuals who stand their ground and take control of their own destiny. Along with the breathable mesh, the cushioned footbed within will help you run your errands in comfort",
     ),
     Product(
       imageurl:
@@ -78,7 +80,8 @@ List<Brand> brand = [
       name: "Mens caliber",
       price: "Rs.4,000",
       lastprice: "Rs.3,500",
-      description: "",
+      description:
+          "Take on the new paths and feel all the confidence with these mesh Caliber shoes made with passion for the individuals who stand their ground and take control of their own destiny. Along with the breathable mesh, the cushioned footbed within will help you run your errands in comfort",
     ),
   ]),
   Brand(
@@ -92,7 +95,8 @@ List<Brand> brand = [
         name: "ALLEY BACKPACK",
         price: "Rs.3,150",
         lastprice: "Rs.3,500",
-        description: "",
+        description:
+            "Padded laptop compartment which fits up to 15 inch laptops \nBartack stitches on joints for exceptional strength\nAir mesh shoulder and back padding\nChest strap for added stability\nStrap loops to clip on stuff such as shades, bottles and keys\nFlap pocket for quick accessInternal pocket compartments for better organizationOn-strap signature Mheecha acrylic",
       ),
       Product(
         imageurl:
@@ -100,16 +104,17 @@ List<Brand> brand = [
         name: "ARCHER BACKPACK",
         price: "Rs.3,750",
         lastprice: "Rs.4,000",
-        description: "",
+        description:
+            " Bartack machine specialized stitches on joints for exceptional strength\nDedicated laptop compartment\nFits up-to 15” laptopsn\nLuggage sleeve\nOn-strap signature Mheecha acrylic\nD- buckle to attach additional accessories",
       ),
       Product(
-        imageurl:
-            "https://www.mheecha.com/mc/wp-content/uploads/2021/10/Deepteal_Icegrey_Front-504x600.jpg",
-        name: "ALLEY BACKPACK",
-        price: "Rs.3,150",
-        lastprice: "Rs.3,500",
-        description: "",
-      ),
+          imageurl:
+              "https://www.mheecha.com/mc/wp-content/uploads/2021/10/Deepteal_Icegrey_Front-504x600.jpg",
+          name: "ALLEY BACKPACK",
+          price: "Rs.3,150",
+          lastprice: "Rs.3,500",
+          description:
+              "Padded laptop compartment which fits up to 15” laptops\nBartack stitches on joints for exceptional strength\nConsists a drawstring\nSpacious and stylish\nInternal pocket compartments for better organization\nAir mesh shoulder padding\nOn-strap signature Mheecha acrylic"),
     ],
   ),
 ];
