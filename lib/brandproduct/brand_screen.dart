@@ -14,6 +14,7 @@ class Brands extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
         title: Text(
           brand.name.toString(),
           style: const TextStyle(color: Colors.white),
@@ -23,13 +24,17 @@ class Brands extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 250,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
+            height: 500,
+            child: GridView.builder(
+              scrollDirection: Axis.vertical,
               itemCount: brand.products?.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+              ),
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 4.0, horizontal: 10),
                   child: Stack(
                     children: [
                       InkWell(
@@ -42,9 +47,7 @@ class Brands extends StatelessWidget {
                                       )));
                         },
                         child: Container(
-                          width: 175,
-                          margin: const EdgeInsets.symmetric(
-                              vertical: 0.0, horizontal: 8),
+                          width: 190,
                           decoration: const BoxDecoration(
                             color: Colors.white,
                             boxShadow: [
@@ -59,10 +62,13 @@ class Brands extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                brand.products![index].name.toString(),
-                                style: const TextStyle(
-                                  fontSize: 15,
+                              Padding(
+                                padding: const EdgeInsets.all(3.0),
+                                child: Text(
+                                  brand.products![index].name.toString(),
+                                  style: const TextStyle(
+                                    fontSize: 15,
+                                  ),
                                 ),
                               ),
                               Row(
@@ -72,7 +78,7 @@ class Brands extends StatelessWidget {
                                     child: Text(
                                       brand.products![index].price.toString(),
                                       style: const TextStyle(
-                                          color: Colors.blueGrey,
+                                          color: pricecolor,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 18),
                                     ),
@@ -91,7 +97,7 @@ class Brands extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        right: 8,
+                        right: 0.5,
                         top: 0.1,
                         child: InkWell(
                           onTap: () {
@@ -103,17 +109,18 @@ class Brands extends StatelessWidget {
                                         )));
                           },
                           child: Container(
-                            height: 175,
-                            width: 175,
+                            height: 135,
+                            width: 185,
                             decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(8)),
                             ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadiusDirectional.circular(8),
-                              child: Hero(
-                                tag: Key,
+                            child: Hero(
+                              tag: brand.products![index].imageurl.toString(),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadiusDirectional.circular(8),
                                 child: Image.network(
                                   brand.products![index].imageurl.toString(),
                                   fit: BoxFit.cover,
@@ -128,7 +135,7 @@ class Brands extends StatelessWidget {
                 );
               },
             ),
-          ),
+          )
         ],
       ),
     );

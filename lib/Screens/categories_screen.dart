@@ -1,21 +1,16 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:madeinnepal/brandproduct/brand_screen.dart';
-import 'package:madeinnepal/constant.dart';
 
-import 'package:madeinnepal/model_screen/brand.dart';
+import '../brandproduct/brand_screen.dart';
+import '../model_screen/brand.dart';
 
-class RowItems extends StatefulWidget {
-  const RowItems({super.key});
+class Categoreis extends StatefulWidget {
+  const Categoreis({super.key});
 
   @override
-  State<RowItems> createState() => _RowItemsState();
+  State<Categoreis> createState() => _CategoreisState();
 }
 
-class _RowItemsState extends State<RowItems> {
-  bool isloading = true;
+class _CategoreisState extends State<Categoreis> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(

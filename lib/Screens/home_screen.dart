@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:madeinnepal/Screens/Allbrands_screen.dart';
+import 'package:madeinnepal/Screens/categories_screen.dart';
+
 import 'package:madeinnepal/Screens/row_Iteam.dart';
 import 'package:madeinnepal/Screens/trendingitem_screen.dart';
 import 'package:madeinnepal/constant.dart';
+import 'package:shimmer/shimmer.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -16,7 +19,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
+        automaticallyImplyLeading: false,
         title: const Text(
           "HamroSaman",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
@@ -132,7 +135,7 @@ class _HomepageState extends State<Homepage> {
               ),
               const SizedBox(),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(5.0),
                 child: Row(
                   children: const [
                     Text(
@@ -144,8 +147,35 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               const SizedBox(
-                height: 300,
+                height: 280,
                 child: Trending(),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      "Categories",
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0.5),
+                    ),
+                    Text(
+                      "View All",
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: kcolor),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 175,
+                child: const Categoreis(),
               ),
             ],
           ),

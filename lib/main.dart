@@ -19,11 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (BuildContext context) => const SplashScreen(),
-        '/loginscreen': (BuildContext context) => const LoginScreen(),
-      },
+      home: SplashScreen(),
     );
   }
 }
