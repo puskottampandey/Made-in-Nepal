@@ -14,6 +14,7 @@ class ProductDetails extends StatefulWidget {
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
+  final player = AudioPlayer();
   bool ispressed = false;
   int experssion = 0;
   increaseitem() {
@@ -132,9 +133,15 @@ class _ProductDetailsState extends State<ProductDetails> {
                                   : Icons.favorite_border_outlined,
                               color: ispressed ? kcolor : Colors.black,
                             ),
-                            onPressed: () {
+                            onPressed: () async {
                               setState(() {
                                 ispressed = !ispressed;
+                                if (ispressed) {
+                                  player.play(AssetSource('thankyou.mp3'));
+                                } else {
+                                  player
+                                      .play(AssetSource('sadtrombone.swf.mp3'));
+                                }
                               });
                             },
                           )
