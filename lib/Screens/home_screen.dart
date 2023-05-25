@@ -51,133 +51,138 @@ class _HomepageState extends State<Homepage> {
           )
         ],
       ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: SafeArea(
-          top: true,
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Container(
-                  height: 55,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        spreadRadius: 0.0,
-                        blurRadius: 2,
-                      )
-                    ],
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                  ),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 375,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: TextFormField(
-                            decoration: const InputDecoration(
-                                iconColor: kcolor,
-                                suffixIcon: Icon(Icons.search),
-                                suffixIconColor: kcolor,
-                                border: InputBorder.none,
-                                hintText: "Search Product......",
-                                hintStyle: TextStyle(color: kcolor)),
+      body: Scrollbar(
+        thickness: 12,
+        radius: const Radius.circular(5),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: SafeArea(
+            top: true,
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Container(
+                    height: 55,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          spreadRadius: 0.0,
+                          blurRadius: 2,
+                        )
+                      ],
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 375,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                  iconColor: kcolor,
+                                  suffixIcon: Icon(Icons.search),
+                                  suffixIconColor: kcolor,
+                                  border: InputBorder.none,
+                                  hintText: "Search Product......",
+                                  hintStyle: TextStyle(color: kcolor)),
+                            ),
                           ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          "Brands",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 0.5),
                         ),
-                      )
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: ((context) => const Allbrands())));
+                          },
+                          child: const Text(
+                            "View All",
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: kcolor),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 175,
+                  child: Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 10, vertical: 0.0),
+                    child: RowItems(),
+                  ),
+                ),
+                const SizedBox(),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Row(
+                    children: const [
+                      Text(
+                        "Trending Products ",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
+                      ),
                     ],
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 100,
-                child: Padding(
+                const SizedBox(
+                  height: 280,
+                  child: Trending(),
+                ),
+                Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        "Brands",
+                    children: const [
+                      Text(
+                        "Categories",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             letterSpacing: 0.5),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: ((context) => const Allbrands())));
-                        },
-                        child: const Text(
-                          "View All",
-                          style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                              color: kcolor),
-                        ),
-                      )
+                      Text(
+                        "View All",
+                        style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            color: kcolor),
+                      ),
                     ],
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 175,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0.0),
-                  child: RowItems(),
+                SizedBox(
+                  height: 175,
+                  child: const Categoreis(),
                 ),
-              ),
-              const SizedBox(),
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Row(
-                  children: const [
-                    Text(
-                      "Trending Products ",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 280,
-                child: Trending(),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      "Categories",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 0.5),
-                    ),
-                    Text(
-                      "View All",
-                      style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: kcolor),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 175,
-                child: const Categoreis(),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
