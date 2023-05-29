@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:madeinnepal/Screens/cart_screen.dart';
 import 'package:madeinnepal/constant.dart';
 import 'package:madeinnepal/model_screen/brand.dart';
 import 'package:audioplayers/audioplayers.dart';
@@ -33,6 +34,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   @override
   Widget build(BuildContext context) {
+    final data;
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 13),
@@ -66,10 +68,15 @@ class _ProductDetailsState extends State<ProductDetails> {
                   color: kcolor,
                   borderRadius: BorderRadius.circular(32),
                 ),
-                child: const Center(
-                    child: Text(
-                  "Add to Cart",
-                  style: TextStyle(color: Colors.white),
+                child: Center(
+                    child: TextButton(
+                  onPressed: () {
+                    Cart(data: widget.products.name.toString());
+                  },
+                  child: const Text(
+                    "Add to Cart",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 )),
               )
             ],

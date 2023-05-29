@@ -28,7 +28,9 @@ class _HomeState extends State<Home> {
       case 0:
         return const Homepage();
       case 1:
-        return const Cart();
+        return const Cart(
+          data: '',
+        );
       case 2:
         return const Profile();
     }

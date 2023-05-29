@@ -40,7 +40,7 @@ class Trending extends StatelessWidget {
                       blurRadius: 2,
                     )
                   ],
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),
                 child: Row(
                   children: [
