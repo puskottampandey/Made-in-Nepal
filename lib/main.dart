@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:madeinnepal/loginin_sceen.dart';
+
 import 'package:madeinnepal/splash_screen.dart';
 
 void main() {

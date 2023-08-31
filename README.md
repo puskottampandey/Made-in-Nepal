@@ -1,16 +1,6 @@
 # madeinnepal
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![photo_6305589496581830607_y](https://github.com/puskottampandey/Made-in-Nepal/assets/83902408/c57b857a-2e83-42d2-a409-7ee0c3ea5f5c)
+![photo_6274068302099756445_y](https://github.com/puskottampandey/Made-in-Nepal/assets/83902408/27b2cf2c-cde7-4c04-bb08-1801080f9094)
+![photo_6274068302099756446_y](https://github.com/puskottampandey/Made-in-Nepal/assets/83902408/059f186c-944f-41ab-8d00-45543e9526b9)
+![photo_6274068302099756447_y](https://github.com/puskottampandey/Made-in-Nepal/assets/83902408/73d7d204-e425-4dcb-aa56-93ff033d8e5f)
