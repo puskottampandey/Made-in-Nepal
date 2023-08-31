@@ -63,31 +63,36 @@ class Trending extends StatelessWidget {
                             fit: BoxFit.cover),
                       ),
                     ),
-                    Column(
-                      children: [
-                        Text(
-                          product.name.toString(),
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              product.price.toString(),
-                              style: const TextStyle(
-                                  color: pricecolor,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18),
-                            ),
-                            Text(
-                              product.lastprice.toString(),
-                              style: const TextStyle(
-                                  fontSize: 10,
-                                  decoration: TextDecoration.lineThrough,
-                                  decorationThickness: 1),
-                            )
-                          ],
-                        )
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            product.name.toString(),
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                product.price.toString(),
+                                style: const TextStyle(
+                                    color: pricecolor,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18),
+                              ),
+                              Text(
+                                product.lastprice.toString(),
+                                style: const TextStyle(
+                                    fontSize: 10,
+                                    decoration: TextDecoration.lineThrough,
+                                    decorationThickness: 1),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ],
                 ),

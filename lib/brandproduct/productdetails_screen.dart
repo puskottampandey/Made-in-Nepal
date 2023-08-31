@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:madeinnepal/Screens/cart_screen.dart';
 import 'package:madeinnepal/constant.dart';
 import 'package:madeinnepal/model_screen/brand.dart';
-import 'package:audioplayers/audioplayers.dart';
 
 class ProductDetails extends StatefulWidget {
   final Product products;
@@ -15,7 +14,6 @@ class ProductDetails extends StatefulWidget {
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
-  final player = AudioPlayer();
   bool ispressed = false;
   int experssion = 0;
   increaseitem() {
@@ -34,7 +32,6 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   @override
   Widget build(BuildContext context) {
-    final data;
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 13),
@@ -71,7 +68,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 child: Center(
                     child: TextButton(
                   onPressed: () {
-                    Cart(data: widget.products.name.toString());
+                    const Cart();
                   },
                   child: const Text(
                     "Add to Cart",
@@ -143,12 +140,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                             onPressed: () async {
                               setState(() {
                                 ispressed = !ispressed;
-                                if (ispressed) {
-                                  player.play(AssetSource('thankyou.mp3'));
-                                } else {
-                                  player
-                                      .play(AssetSource('sadtrombone.swf.mp3'));
-                                }
                               });
                             },
                           )
