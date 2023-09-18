@@ -138,10 +138,10 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
                 const SizedBox(),
-                Padding(
+                const Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: Row(
-                    children: const [
+                    children: [
                       Text(
                         "Trending Products ",
                         style: TextStyle(
@@ -154,11 +154,11 @@ class _HomepageState extends State<Homepage> {
                   height: 280,
                   child: Trending(),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         "Categories",
                         style: TextStyle(
@@ -177,9 +177,9 @@ class _HomepageState extends State<Homepage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 175,
-                  child: const Categoreis(),
+                  child: Categoreis(),
                 ),
               ],
             ),
